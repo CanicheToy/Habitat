@@ -277,6 +277,23 @@ body{
 	align-items: center;
 	z-index: 2;
 }
+	#camion img{
+		width: 4em;
+		height: 4em;
+}
+	#logo img{
+		width: 17em;
+		height: 9.63em;
+}
+	#redes{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+}
+	#redes img{
+		width: 3em;
+		height: 3em;
+}
 	.nav{
 		padding: 0;
 	}
