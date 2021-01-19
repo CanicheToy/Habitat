@@ -278,12 +278,12 @@ body{
 	z-index: 2;
 }
 	#camion img{
-		width: 4em;
-		height: 4em;
+		width: 3.2em;
+		height: 3.2em;
 }
 	#logo img{
-		width: 17em;
-		height: 9.63em;
+		width: 16em;
+		height: 9.06em;
 }
 	#redes{
 		display: flex;
@@ -291,8 +291,8 @@ body{
 		justify-content: flex-end;
 }
 	#redes img{
-		width: 3em;
-		height: 3em;
+		width: 2.5em;
+		height: 2.5em;
 }
 	.nav{
 		padding: 0;
