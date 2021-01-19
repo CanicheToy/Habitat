@@ -1,0 +1,350 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+}
+.todo > * {
+	font-size: 1rem;
+	text-align: center;
+	color: white;
+	font-family: 'Short Stack', cursive;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.todo{
+	display: grid;
+	grid-gap: 0.05em; 
+	grid-template-areas: 
+		"header header"  
+		"nav nav" 
+		"main aside"
+		"footer footer";
+	grid-template-columns: auto 30%;
+	grid-template-rows: 10.5rem 3.5rem auto 22rem;
+}
+.header {
+	grid-area: header;
+	background-color:#7ed957;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 2;
+}
+	#camion{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+	#camion img{
+		width: 4em;
+		height: 4em;
+}
+	#logo img{
+		width: 17em;
+		height: 9.63em;
+}
+	#redes{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+}
+	#redes img{
+		width: 4em;
+		height: 4em;
+}
+	#redes a{
+		text-decoration: none;
+		color: white;
+	}
+.nav{
+	grid-area: nav;
+	width: 100%;
+	background-color: #7ed957;
+	box-shadow: 1px 10px 15px 3px #959A93;
+	z-index: 1;
+}
+	#btn-menu{
+		display: none;
+}
+	.nav label img{
+		display: none;
+		width: 3.5em;
+		height: 3.5em;
+		padding: 0.5em;
+
+}
+	.nav label img:hover{
+		cursor: pointer;
+		background: rgba(0,0,0,0.3);
+		}
+	.menu ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: row;
+		font-size: 1.5rem;
+	}
+	.menu li{
+		flex-grow: 1;
+		}
+	.menu ul li a{
+		display: block;
+		padding left: 4em;
+		padding right: 4em;
+		padding-top: 0.55em;
+		padding-bottom:0.55em;
+		color: white;
+		text-decoration: none;
+	}
+	.menu ul li a:hover{
+		background-color: gold;
+		transition: 0.5s;
+	}
+.main {
+	grid-area: main;
+	background-color: #FEFFD1;
+}
+	#primero{
+		font-size: 1.7rem;
+		color: #3386FF;
+		padding: 1rem;
+		font-weight: bold;
+}
+	.contenedor{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		align-items: center;
+		padding-top: 0em;
+		padding-left: 1em;
+		padding-right:1em;
+		padding-bottom: 1em;
+}
+	.fotos{
+		font-size: 1.5rem;
+		color: #DF2C99;
+		font-weight: bold;
+		padding: 1em;
+		}
+	.producto{
+		width: 12.5em;
+		height: 12.5em;
+}
+	.producto:hover{
+	transform: rotate(5deg);
+}
+.aside {
+	grid-area: aside;
+	padding: 0 !important;
+	display: flex;
+	flex-direction: column;
+	background-color: #FEFFD1;
+}
+	.fragancias{
+		position: relative;
+	}
+	.fragancias img{
+		max-width: 100%;
+		width: 100%;
+		filter: brightness(0.8);
+	}
+	#fraganciastexto p{
+		position: absolute;
+		color: white;
+		font-size: 2em;
+		top: 15%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-shadow: black 0.1em 0.1em 0.2em;
+	}
+	.fragancias:hover{
+		filter: brightness(1.2);
+	}
+	
+	
+.footer {
+	grid-area: footer;
+	background-color: #7ed957;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: left;
+	align-content: space-around;
+	box-shadow: 1px -10px 15px 3px #959A93;
+}
+	#datosdecontacto{
+		font-size: 2em;
+		color: white;
+		font-weight: bold;
+		letter-spacing: 3px;
+}
+	.ultimos{
+		display: inline-flex;
+		align-items: center;
+		align-content: center;
+		font-size: 1.4em;
+		color: white;
+}
+	.ultimos img{
+		height: 2rem;
+		width:2rem;
+}
+	.contact{
+		margin-left: 1em;
+}
+	#ultimologo img{
+		width: 14.0625rem;
+}
+@media (max-width: 1310px){
+	.todo{
+		display: grid;
+		grid-gap: 0.05em; 
+		grid-template-areas: 
+		"header header"  
+		"nav nav" 
+		"main aside"
+		"footer footer";
+		grid-template-columns: auto 20%;
+		grid-template-rows: 10.5rem 3.5rem auto 22rem;
+}
+	.contenedor{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 0em;
+		padding-left: 0em;
+		padding-right:0em;
+		padding-bottom: 0em;
+}
+	.producto{
+		width: 10em;
+		height: 10em;
+}
+	.fotos{
+		font-size: 1.5rem;
+		color: #DF2C99;
+		font-weight: bold;
+		padding: 1em;
+		max-width: 15em;
+	}
+	
+	#fraganciastexto p{
+		position: absolute;
+		color: white;
+		font-size: 1.5em;
+		top: 15%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-shadow: black 0.1em 0.1em 0.2em;
+	}
+}
+@media (max-width: 900px){
+	.todo {
+	display: grid;
+    grid-gap:0.05rem;
+	grid-template-areas: 
+	"header header" 
+	"nav nav"
+	"main main" 
+	"aside aside"
+	"footer footer";
+	grid-template-rows: 10.5rem 3.5rem auto auto auto;
+	width: 100%;
+}
+	.nav{
+		padding: 0;
+	}
+		.nav label img{
+		display: block;
+		width: 3.5em;
+		height: 3.5em;
+		padding: 0.5em;
+}
+	.menu{
+		position: absolute;
+		background-color: #7ed957;
+		width: 70%;
+		padding: 0;
+		margin-left: -70%;
+		transition: all 0.5s;
+		
+	}
+		.menu ul {
+		margin: 0;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		font-size: 1.5rem;
+		}
+	.menu li{
+		flex-grow: 1;
+		border-top: 0.05em solid white;
+		}
+	.menu ul li a{
+		display: block;
+		padding left: 4em;
+		padding right: 4em;
+		padding-top: 0.55em;
+		padding-bottom:0.55em;
+		color: white;
+		text-decoration: none;
+	}
+	.menu ul li a:hover{
+		background-color: gold;
+		transition: 0.5s;
+	}
+	#btn-menu:checked ~ .menu {
+		margin: 0;
+	}
+	.footer{
+		box-shadow: 1px -10px 15px 3px #959A93;
+		z-index: 3;
+	}
+	#ultimologo {
+	padding: 1rem;
+	display: inline-block;
+	text-align: center;
+}
+	.contact{
+	margin-left: 0.5em;
+}	
+	#fraganciastexto p{
+		position: absolute;
+		color: white;
+		font-size: 4em;
+		top: 15%;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		text-shadow: black 0.1em 0.1em 0.2em;
+	}
+
+		.fragancias {
+		max-height: 37em;
+		overflow: hidden;
+		border-top: 0.3em solid #7ed957;
+
+	}
+	.contenedor{
+		justify-content: space-around;
+	}
+  }
